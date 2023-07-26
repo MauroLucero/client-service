@@ -1,8 +1,7 @@
-package service;
+package com.demo.bank.clientservice.service;
 
 
-import entity.Account;
-import model.ClientDTO;
+import com.demo.bank.clientservice.model.ClientDTO;
 
 import java.util.Set;
 
@@ -18,6 +17,5 @@ public interface IClientService {
 
     void deleteClient(Long id);
 
-    public void addAccount(Long clientId, Account account);
 
 }

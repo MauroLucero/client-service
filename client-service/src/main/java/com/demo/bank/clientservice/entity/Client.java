@@ -1,11 +1,10 @@
-package entity;
+package com.demo.bank.clientservice.entity;
 
+import com.demo.bank.clientservice.entity.enums.Gender;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import entity.enums.Gender;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.HashSet;
 import java.util.Set;
 @Entity
 @Table(name = "client")
@@ -24,7 +23,7 @@ public class Client {
     private Address address;
     @OneToMany(mappedBy = "client")
     @JsonIgnore
-    private Set<Account> accounts = new HashSet<>();
+    private Set<Account> accounts;
     private LocalDate dateOfCreation;
 
     public Client() {

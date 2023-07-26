@@ -1,4 +1,4 @@
-package entity;
+package com.demo.bank.clientservice.entity;
 
 import jakarta.persistence.*;
 

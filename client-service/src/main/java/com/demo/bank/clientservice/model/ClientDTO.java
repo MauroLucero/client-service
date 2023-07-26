@@ -1,9 +1,9 @@
-package model;
+package com.demo.bank.clientservice.model;
 
 
-import entity.Account;
-import entity.Address;
-import entity.enums.Gender;
+import com.demo.bank.clientservice.entity.Account;
+import com.demo.bank.clientservice.entity.Address;
+import com.demo.bank.clientservice.entity.enums.Gender;
 
 import java.time.LocalDate;
 import java.util.Set;

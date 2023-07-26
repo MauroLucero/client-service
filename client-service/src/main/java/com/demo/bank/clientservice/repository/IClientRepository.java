@@ -1,6 +1,6 @@
-package repository;
+package com.demo.bank.clientservice.repository;
 
-import entity.Client;
+import com.demo.bank.clientservice.entity.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

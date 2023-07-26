@@ -1,13 +1,11 @@
-package service;
+package com.demo.bank.clientservice.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import entity.Account;
-import entity.Client;
-import jakarta.persistence.EntityNotFoundException;
-import model.ClientDTO;
+import com.demo.bank.clientservice.entity.Client;
+import com.demo.bank.clientservice.model.ClientDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.IClientRepository;
+import com.demo.bank.clientservice.repository.IClientRepository;
 
 import java.util.HashSet;
 import java.util.List;
@@ -65,13 +63,5 @@ public class ClientService implements IClientService{
         clientRepository.deleteById(id);
     }
 
-    @Override
-    public void addAccount(Long clientId, Account account){
-        Client client = clientRepository.findById(clientId)
-                .orElseThrow(() -> new EntityNotFoundException("Client not found with ID: " + clientId));
 
-        client.getAccounts().add(account);
-
-        clientRepository.save(client);
-    }
 }
